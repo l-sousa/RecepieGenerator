@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/6f67cbf22a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bottom_nav.css">
+    <link rel="stylesheet" href="../css/recipeitself.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+
+    <title>Arroz de Marisco</title>
+</head>
+
+<body>
+    <!-- back button -->
+    <div class="container">
+        <div class="row d-flex flex-row">
+            <button class="btn btn-primary" onclick="previous_page()" style="height:2.6em; width:2.6em; margin: 2%;border: 0px; border-radius: 50%; background:rgb(243, 205, 190)    ;"><i class="fa fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+    <section id="page">
+    </section>
+
+    <p class="title" style="text-align: center;vertical-align: middle;">Arroz de Marisco</p>
+
+    <div id="carouselExampleControls" class="carousel slide img_receita" data-ride="carousel" data-interval="false" style="max-width: 70%;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../img/marisco.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item" style="background-color:  rgb(255, 241, 219); max-height: 100%;">
+                <p class="title descricao">"Com apenas oito ingredientes este arroz de marisco é cremoso, saboroso e fácil de fazer."</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+    </br>
+    <div class="tab butoes">
+        <button class="tablinks" id="first" onclick="openCity(event, 'London')">Ingredientes</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Passos</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Reviews</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Marisco variado</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">800 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Cebola</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">200 ml</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Alho</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">300 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Azeite</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">e c. sopa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Tomate</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">750 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Coentros</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">q.b</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Água</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1 l</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Sal</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1 c. sopa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Arroz</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">250 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Limão</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1/2</p>
+            </div>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        </br>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 1</p>
+            <p class="mx-auto steps">Retire as delícias do mar do preparado de marisco e reserve-as. Pique a cebola e corte o alho-francês em rodelas. Aqueça o azeite num tacho, junte a cebola e o alho-francês e deixe cozinhar cerca de 5 minutos ou até começarem a alourar.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 2</p>
+            <p class="mx-auto steps">Lave o tomate, limpe-o de sementes e corte-o em pedaços. Pique os pés de um molho de coentros. Junte o tomate e os pés dos coentros picados aos legumes, tape e cozinhe em lume brando cerca de 10 minutos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 3</p>
+            <p class="mx-auto steps">Noutro tacho, ferva a água temperada com o sal e introduza o preparado de mariscos. Deixe ferver 2 minutos e coe os mariscos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 4</p>
+            <p class="mx-auto steps">Deite o caldo da cozedura sobre os legumes, mexa e assim que retomar fervura, introduza o arroz. Volte a mexer e cozinhe, tapado e em lume moderado a brando, durante 15 minutos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 5</p>
+            <p class="mx-auto steps">Retire os camarões com casca, os mexilhões e as amêijoas e junte-os às delícias do mar reservadas. Adicione os restantes mariscos ao arroz no final da cozedura, mexa e retire do lume.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 6</p>
+            <p class="mx-auto steps">Junte uma mão-cheia de folhas de coentros e regue com o sumo do limão. Enfeite com os mariscos reservados e sirva de imediato.</p>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        </br>
+        <div class="row">
+            <img src="../img/spacebuns.png" class="user_icon" style="margin-left:10%">
+            <p>@bestCooker</p>
+            <p class="mx-auto steps" style=" font-size: 75%; margin-top: 2%;">"Experimentei esta receita no outro dia e ficou tão bom! Recomendo a quemt tenha um bocadinho de tempo livre."</p>
+            <span class="mx-auto sexy_line"></span>
+        </div>
+        </br>
+        <div class="row">
+            <img src="../img/bigodes.png" class="user_icon" style="margin-left:10%">
+            <p>@masterrch3f</p>
+            <p class="mx-auto steps" style=" font-size: 75%; margin-top: 2%;">"Ficou bom."</p>
+            <span class="mx-auto sexy_line"></span>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="bottom_nav" class="navbar">
+        <a href=""><i class="fa fa-home"></i></a>
+        <a href="" class="active"><i class="fa fa-search"></i></a>
+        <a href=""><i class="fa fa-user"></i></a>
+    </div>
+</body>
+<script src="../js/recipe.js "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

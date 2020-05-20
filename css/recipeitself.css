@@ -1,0 +1,105 @@
+.img_receita {
+    padding: 0;
+    margin: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-control-next-icon{
+    color:black;
+}
+.carousel-control-prev-icon{
+    outline: black;
+}
+
+.sexy_line {
+    display: block;
+    border: none;
+    color: white;
+    height: 1px;
+    width: 50%;
+    background: rgb(88, 88, 88);
+    background: -linear-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#000), to(#fff));
+}
+
+.user_icon {
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+}
+
+.descricao {
+    font-family: 'Playfair Display';
+    font-size: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(255, 241, 219);
+    width: 100%;
+}
+
+.steps {
+    text-align: center;
+    vertical-align: middle;
+    width: 80%;
+}
+
+.butoes {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.tab {
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: rgb(255, 234, 211);
+    text-decoration: underline rgb(255, 190, 137) 2px;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s;
+    /* Fading effect takes 1 second */
+}
+
+
+/* Go from zero to full opacity */
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

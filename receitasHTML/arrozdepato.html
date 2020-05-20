@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/6f67cbf22a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bottom_nav.css">
+    <link rel="stylesheet" href="../css/recipeitself.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+
+    <title>Arroz de pato</title>
+</head>
+
+<body>
+    <!-- back button -->
+    <div class="container">
+        <div class="row d-flex flex-row">
+            <button class="btn btn-primary" onclick="previous_page()" style="height:2.6em; width:2.6em; margin: 2%;border: 0px; border-radius: 50%; background:rgb(243, 205, 190)    ;"><i class="fa fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+    <section id="page">
+    </section>
+    <p class="title" style="text-align: center;vertical-align: middle;">Arroz de Pato</p>
+
+    <div id="carouselExampleControls" class="carousel slide img_receita" data-ride="carousel" data-interval="false" style="max-width: 70%;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../img/pato.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item" style="background-color:  rgb(255, 241, 219); max-height: 100%;">
+                <p class="title descricao">"Um arroz de pato é sempre uma boa ideia para uma festa ou para um encontro com amigos. Aprenda a fazê-lo com quem sabe. Sai sempre bem."</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+    </br>
+    <div class="tab butoes">
+        <button class="tablinks" id="first" onclick="openCity(event, 'London')">Ingredientes</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Passos</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Reviews</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Água</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1,5 L</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Vinho Tinto</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">100 ml</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Chouriço</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">150 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Toucinho</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">150 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Louro</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">2 folhas</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Peito de Pato</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Sal</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1 c. chá</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Azeite</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">50 ml</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Cebola</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Alho</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">3 dentes</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Polpa de Tomate</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">1 c. sopa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Arroz Agulha</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">400 g</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Pimenta Preta</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">q.b</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Colorau</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">q.b</p>
+            </div>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        </br>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 1</p>
+            <p class="mx-auto steps">Num tacho, coloque o litro e meio de água, o vinho tinto, metade do chouriço, o toucinho fumado, as folhas de louro, os peitos de pato e o sal.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 2</p>
+            <p class="mx-auto steps">Deixe cozer durante 40 minutos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 3</p>
+            <p class="mx-auto steps">Coe e reserve o caldo da cozedura do pato.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 4</p>
+            <p class="mx-auto steps">Num tacho, faça um refogado com o azeite, a cebola picada e o alho picado. Deixe alourar 3 minutos e junte a polpa de tomate.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 5</p>
+            <p class="mx-auto steps">Deixe apurar durante 5 minutos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 6</p>
+            <p class="mx-auto steps">Deixe arrefecer as carnes, desfie o pato e corte o chouriço e o toucinho fumado aos cubos. Junte ao tacho do refogado.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 7</p>
+            <p class="mx-auto steps">Adicione um pouco do caldo e deixe apurar durante 3 minutos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 8</p>
+            <p class="mx-auto steps">Junte o arroz e misture bem. Depois adicione 400 ml do caldo da cozedura, a pimenta e o colorau. Quando levantar fervura baixe o lume e deixe cozer durante 10 minutos.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 9</p>
+            <p class="mx-auto steps">Coloque o arroz num tabuleiro de ir ao forno. Corte o restante chouriço às rodelas e decore por cima do arroz.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 10</p>
+            <p class="mx-auto steps">Leve ao forno a 170º C durante 15 minutos até alourar.</p>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        </br>
+        <div class="row">
+            <img src="../img/spacebuns.png" class="user_icon" style="margin-left:10%">
+            <p>@bestCooker</p>
+            <p class="mx-auto steps" style=" font-size: 75%; margin-top: 2%;">"Experimentei esta receita no outro dia e ficou tão bom! Recomendo a quemt tenha um bocadinho de tempo livre."</p>
+            <span class="mx-auto sexy_line"></span>
+        </div>
+        </br>
+        <div class="row">
+            <img src="../img/bigodes.png" class="user_icon" style="margin-left:10%">
+            <p>@masterrch3f</p>
+            <p class="mx-auto steps" style=" font-size: 75%; margin-top: 2%;">"Ficou bom."</p>
+            <span class="mx-auto sexy_line"></span>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="bottom_nav" class="navbar">
+        <a href=""><i class="fa fa-home"></i></a>
+        <a href="" class="active"><i class="fa fa-search"></i></a>
+        <a href=""><i class="fa fa-user"></i></a>
+    </div>
+</body>
+<script src="../js/recipe.js "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

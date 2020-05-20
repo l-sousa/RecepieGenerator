@@ -1,0 +1,249 @@
+LACTICÍNIOS
+manteiga
+ovo
+leite de vaca
+iogurte
+leite condensado
+gelado
+natas de culinária
+natas para bater
+mozzarela
+gouda
+queijo fresco
+brie
+parmesão
+mascarpone
+feta
+emmental
+cheddar
+camembert
+queijo com ervas
+quejo de raclette
+edam
+roquefort
+quejo de cabra
+queijo da serra
+velveeta
+VEGETAIS
+cebola
+alho
+batata
+cenoura
+pimento
+manjericão
+salsa
+brócolos
+milho
+espinafre
+cogumelo
+gengibre
+piri-piri
+pimento picante
+rosmaninho
+alface
+cebola roxa
+pepino
+batata doce
+picles
+abacate
+azeitona
+couve
+couve-flor
+beringela
+abóbora
+xuxu
+FRUTAS
+tomate
+limão
+maçã
+banana
+lima
+morango
+laranja 
+ananás
+mirtilo
+passa
+coco
+uva
+pêra
+manga
+pêssego
+amora
+amora preta
+cereja
+melância
+kiwi
+nectarina
+clementina
+papaia
+ameixa
+HIDRATOS_DE_CARBONO
+arroz
+massa
+farinha
+pão
+fermento
+bicarbonato de sódio
+pão ralado
+amido de milho
+aveia
+noodle
+tortilha
+fermento de pão
+bolacha de água e sal
+quinoa
+arroz integral
+farinha com fermento
+pipocas
+massa de tarte
+massa folhada
+massa de pizza
+croutons
+pão pita
+basmati
+arroz agulha
+massa para lasanha
+ESPECIARIAS_&_TEMPEROS
+canela
+baunilha
+alho em pó
+paprica
+orégãos
+cuminho
+pimenta-caiena
+tomilho
+noz-moscada
+caril
+açafrão
+salva
+cacau
+estrela de anís
+vinho para arroz
+wasabi
+CARNE
+peito de galinha
+carne moída
+bacon
+salsicha fresca
+bife
+fiambre
+salsicha hotdog
+costoleta de porco
+coxa de galinha
+peru
+chouriço
+porco
+pepperoni
+galinha
+perna de galinha
+asas de galinha
+salame
+persunto
+cabrito
+pato
+fígado
+coelho
+foie gras
+PEIXE
+atum em lata
+bife de atum
+salmão
+filetes de pescada
+peixe-gato
+anchovas
+salmão fumado
+enguia
+caviar
+bacalhau
+sardinha
+dourada
+perca
+tamboril
+peixe-espada
+carapau
+corvina
+MARISCO
+camarão
+caranguejo
+escalope
+ostra
+amêijoa
+lula
+choco
+polvo
+lagosta
+mexilhão
+percebes
+vieira
+sapateira
+CONDIMENTOS_&_ÓLEOS
+molho barbecue
+ketchup
+maionese
+mostarda
+mostarda dijon
+molho cocktail
+molho picante
+molho de soja
+vinagre
+vinagre balsâmico
+vinagre de maçã
+molho agridoce
+teriaki
+tabasco
+molho para kebab
+molho de caril e manga
+maionese com alho
+molho de francesinha
+LEGUMES
+feijão preto
+feijão manteiga
+lentilhas
+grão de bico
+fava
+feijão vermelho
+ervilhas
+soja
+feijão verde
+feijão branco
+feijão frade
+ALCÓOL
+vinho branco
+cerveja
+vinho tinto
+vinho do porto
+rum
+whiskey
+tequila
+bourbon
+licor
+brandy
+gin
+champanhe
+cognac
+vodka
+vinho de culinária
+sake
+FRUTOS_SECOS
+manteiga de amendoim
+amêndoa
+noz
+noz-pecã
+amendoim
+caju
+pinhão
+avelã
+castanha
+macadâmia
+praline
+VEGAN_e_VEGETARIANO
+bebida de soja
+bebida de arroz
+bebida de amêndoa
+bebida de amêndoa torrada
+bebida de aveia
+bebida de coco
+soja
+tofu
+seitã
+FIM

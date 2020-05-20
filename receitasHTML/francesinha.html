@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://kit.fontawesome.com/6f67cbf22a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bottom_nav.css">
+    <link rel="stylesheet" href="../css/recipeitself.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+
+    <title>Francesinha</title>
+</head>
+
+<body>
+    <!-- back button -->
+    <div class="container">
+        <div class="row d-flex flex-row">
+            <button class="btn btn-primary" onclick="previous_page()" style="height:2.6em; width:2.6em; margin: 2%;border: 0px; border-radius: 50%; background:rgb(243, 205, 190)    ;"><i class="fa fa-arrow-left"></i></button>
+        </div>
+    </div>
+
+    <section id="page">
+    </section>
+
+    <p class="title" style="text-align: center;vertical-align: middle;">Francesinha</p>
+
+    <div id="carouselExampleControls" class="carousel slide img_receita" data-ride="carousel" data-interval="false" style="max-width: 70%;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../img/francesinha.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item" style="background-color:  rgb(255, 241, 219); max-height: 100%;">
+                <p class="title descricao">"Prato típico do Porto para quem tem saudades de uma iguaria nacional."</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+    </br>
+    <div class="tab butoes">
+        <button class="tablinks" id="first" onclick="openCity(event, 'London')">Ingredientes</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Passos</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Reviews</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="London" class="tabcontent">
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Bife de vaca</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Queijo</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">8 fatias</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Pão de forma</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">6 fatias</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Salsicha</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Linguiça</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">2</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Fiambre</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">2 fatias</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Sal</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">q.b</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p style="float:left; margin-left: 20%;">Pimenta</p>
+            </div>
+            <div class="col-6">
+                <p style="float: right; margin-right: 20%;">q.b</p>
+            </div>
+        </div>
+        
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+        </br>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 1</p>
+            <p class="mx-auto steps">Cortar as salsichas ao meio e cortar novamente as metades, temperando de seguida com sal e pimenta.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 2</p>
+            <p class="mx-auto steps">Cortar as linguiças de igual modo.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 3</p>
+            <p class="mx-auto steps">Temperar os bifes com sal e pimenta, q.b, grelhando tudo de seguida.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 4</p>
+            <p class="mx-auto steps">Torrar ligeiramente as fatias de pão, cobrindo depois com uma fatia de fiambre.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 5</p>
+            <p class="mx-auto steps">Juntar por cima o bife e colocar então outra fatia de pão por cima.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 6</p>
+            <p class="mx-auto steps">Adicionar a salsicha e a linguiça, cobrir com queijo e finalizar com a última fatia de pão.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 7</p>
+            <p class="mx-auto steps">Cobrir tudo com 3 fatias de queijo e levar ao forno a 200ºC até derreter.</p>
+        </div>
+        <div class="row">
+            <p class="mx-auto steps" style="color:rgb(255, 190, 137)">Passo 8</p>
+            <p class="mx-auto steps">Regar com molho de francesinha.</p>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        </br>
+        <div class="row">
+            <img src="../img/spacebuns.png" class="user_icon" style="margin-left:10%">
+            <p>@bestCooker</p>
+            <p class="mx-auto steps" style=" font-size: 75%; margin-top: 2%;">"Experimentei esta receita no outro dia e ficou tão bom! Recomendo a quemt tenha um bocadinho de tempo livre."</p>
+            <span class="mx-auto sexy_line"></span>
+        </div>
+        </br>
+        <div class="row">
+            <img src="../img/bigodes.png" class="user_icon" style="margin-left:10%">
+            <p>@masterrch3f</p>
+            <p class="mx-auto steps" style=" font-size: 75%; margin-top: 2%;">"Ficou bom."</p>
+            <span class="mx-auto sexy_line"></span>
+        </div>
+        </br>
+        </br>
+        </br>
+    </div>
+
+    <div id="bottom_nav" class="navbar">
+        <a href=""><i class="fa fa-home"></i></a>
+        <a href="" class="active"><i class="fa fa-search"></i></a>
+        <a href=""><i class="fa fa-user"></i></a>
+    </div>
+</body>
+<script src="../js/recipe.js "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
