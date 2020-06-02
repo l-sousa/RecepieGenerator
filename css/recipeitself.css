@@ -8,11 +8,9 @@
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-control-next-icon{
-    color:black;
-}
-.carousel-control-prev-icon{
-    outline: black;
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color:red;
 }
 
 .sexy_line {
