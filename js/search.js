@@ -1,9 +1,9 @@
 var filters = [];
 var ingredients = [];
 
-$(document).ready(function () {
+$(document).ready(function() {
     responsive_checkbox();
-
+    localStorage.clear();
     clear_storage();
 });
 
@@ -14,7 +14,7 @@ function clear_storage() {
         if (!firstTime) {
             localStorage.clear();
             localStorage.setItem("primeira_vez", "1");
-            localStorage.setItem("remover", "1");                   // dps o coisa é que tem de colocar a 0
+            localStorage.setItem("remover", "1"); // dps o coisa é que tem de colocar a 0
         } else {
             if (firstTime == "0") {
                 localStorage.clear();
@@ -53,7 +53,7 @@ function clear_storage() {
 
 function responsive_checkbox() {
     // Para os filtros
-    $(".customFilter").change(function () {
+    $(".customFilter").change(function() {
         var val = $(this).val();
         if (this.checked) {
             if (!filters.includes(val))
@@ -65,7 +65,7 @@ function responsive_checkbox() {
     });
 
     // Para o resto das checkboxes
-    $(".custom").change(function () {
+    $(".custom").change(function() {
         var val = $(this).val();
         if (this.checked) {
             if (!ingredients.includes(val))
@@ -78,7 +78,7 @@ function responsive_checkbox() {
 }
 
 function arrayRemove(arr, value) {
-    return arr.filter(function (ele) { return ele != value; });
+    return arr.filter(function(ele) { return ele != value; });
 }
 
 function replace_accent(text) {
@@ -97,7 +97,7 @@ function make_search() {
 
     var recipes = [];
 
-    $.getJSON("https://api.jsonbin.io/b/5ed6810f60775a568586d656", function (data) {
+    $.getJSON("https://api.jsonbin.io/b/5ed6810f60775a568586d656", function(data) {
 
         var current_recipe;
         for (var i = 0; i < data.length; i++) {
@@ -111,17 +111,17 @@ function make_search() {
 
         }
 
-        recipes.sort(function (a, b) {
+        recipes.sort(function(a, b) {
             var res = b[1] - a[1];
             if (res != 0) {
                 return res;
-            } else {                        // caso o valor em percentagem seja igual
-                return a[2] - b[2];         // nesse caso em 1o lugar aparece a receita com menos ingredientes
+            } else { // caso o valor em percentagem seja igual
+                return a[2] - b[2]; // nesse caso em 1o lugar aparece a receita com menos ingredientes
             }
         });
 
-        if (recipes.length > 10)            // se existirem mais de 10 receitas a dar match
-            recipes = recipes.slice(0, 10);           // então retiramos o subarray com as primeiras 10 e ignoramos o resto
+        if (recipes.length > 10) // se existirem mais de 10 receitas a dar match
+            recipes = recipes.slice(0, 10); // então retiramos o subarray com as primeiras 10 e ignoramos o resto
 
         localStorage.setItem("filtros", JSON.stringify(filters));
         localStorage.setItem("receitas", JSON.stringify(recipes));
