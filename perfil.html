@@ -22,50 +22,95 @@
     <div class="container main">
         <div class="container" style="padding-top:5%">
             <img src="./imagens/perfil/avatar.png" class="hoverable imagem_perfil" alt="perfil_pic" style="background-color: white;">
-            <h6 class="perfil_nome"><span id="nome_perfil">Raquel Silva  <i id="edit" class="fa fa-edit"></i></span></h6>
-            <p id="username" class="texto_dados">@raquel123</p>
+            <br>
+            <h6 class="perfil_nome"><span id="nome_perfil">Maria Albertina</span><i id="edit" style="margin-left: 1%;" class="fa fa-edit editbtn" data-toggle="modal" data-target="#myModal"></i></h6>
+            <p id="username" class="texto_dados">@mariaAlber</p>
         </div>
         <hr>
         <div class="container">
             <div class="row">
-                <p id="bio" class="texto_dados">Nunca confiar num chefe magro!!</p>
+                <p id="bio" class="texto_dados">Nunca confie num chefe magrinho!!</p>
             </div>
             <div class="row">
-                <p id="bdate" class="texto_dados"><i id="birthday" class="fa fa-birthday-cake"></i>&nbsp;&nbsp;&nbsp; Nascimento 20 Agosto 2000</p>
+                <p id="bdate" class="texto_dados"><i id="birthday" class="fa fa-birthday-cake"></i>&nbsp;&nbsp;&nbsp; Aniversário <span id="span_aniversario">20 Agosto 2000</span></p>
             </div>
             <div class="row">
-                <p id="bdate" class="texto_dados"><i id="calendar" class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;A gerar receitas desde Março 2020</p>
+                <p id="bdate" class="texto_dados"><i id="calendar" class="fa fa-calendar"></i>&nbsp;&nbsp;&nbsp;Começou a gerar receitas Março 2020</p>
             </div>
         </div>
         <hr>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-6">
-                    <img src="./imagens/perfil/favrecipes.png" class="imgs" alt="favourite recipes">
-                    <p style="text-align: center;font-size: 80%">Livro de Receitas</p>
+                <div class="col-5">
+                    <a href="./cookbook.html">
+                        <img style="border:solid 2px rgb(255, 223, 223);  padding:5%" src="./imagens/perfil/receita.png" class="imgs" alt="favourite recipes">
+                    </a>
                 </div>
-                <div class="col-6">
-                    <img src="./imagens/perfil/recent.png" class="imgs" alt="favourite recipes">
-                    <p  style="text-align: center;font-size: 80%">Visitado recentemente</p>
+                <div class="col-7">
+                    <p style="text-align:center; font-size:100%; color: rgb(197, 72, 0);">Livro de Receitas</p>
                 </div>
             </div>
+            <hr>
+            <div class="row">
+                <div class="col-5">
+                    <a href="./recentes.html">
+                        <img style="border:solid 2px rgb(223, 223, 255); padding:5%"src="./imagens/perfil/cozinhando.png" class="imgs" alt="favourite recipes">
+                    </a>
+                </div>
+                <div class="col-7">
+                    <p style="text-align:center; font-size:100%; color: rgb(0, 0, 141);">Recentemente Vistas</p>
+                </div>
+            </div>
+            
         </div>
-
+        
+        <!-- MODAL PARA EDITAR AS RABANADAS -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+              
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Editar Perfil</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputNome">Nome</label>
+                        <input type="text" class="form-control" id="inputNome" placeholder="Novo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputConta">Nome de conta</label>
+                        <input type="text" class="form-control" id="inputConta" placeholder="Novo nome de conta">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputData">Data de Nascimento</label>
+                        <input type="date" class="form-control" id="inputData" placeholder="Aniversário">
+                    </div>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button id="btn_guardar" type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                </div>
+                
+              </div>
+            </div>
+        </div>
     </div>
 
     <div id="bottom_nav" class="navbar">
         <a href="top_10_receitas.html"><i class="fa fa-home"></i></a>
-        <a href="index.html"><i class="fa fa-search"></i></a>
+        <a href="index.html?clear=true"><i class="fa fa-search"></i></a>
         <a href="" class="active"><i class="fa fa-user"></i></a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!--<script
-        src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>-->
     <script src="./js/perfil.js"></script>
 </body>
 

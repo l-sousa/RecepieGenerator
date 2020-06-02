@@ -27,16 +27,14 @@
     <!-- Fixed Bottom NavBar -->
     <div class="s003 container" style="padding-left:0em; padding-right: 0em;">
         <form>
-            <div class="inner-form">
-                <div class="input-field second-wrap">
-                    <input id="search" type="text" placeholder="Pesquise por ingredientes..." />
-                </div>
+            <div class="inner-form" style="padding-top:10%">
                 <div class="input-field third-wrap">
-                    <button onclick="getIngredients()" class="btn-search" type="button">
+                    <button onclick="make_search()" class="btn-search" type="button">
               <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
               </svg>
             </button>
+            <p style="color: rgb(88, 88, 88); font-size:67%; text-align:center; font-weight:bold;">Selecione abaixo todos os ingredientes que tem a seu dispor!</p>
                 </div>
             </div>
         </form>
@@ -53,42 +51,76 @@
 
 
     <div class="container" style="padding: 4%;">
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filter" aria-expanded="false" aria-controls="filter" style="width: 100%; background: rgb(42, 38, 95); border-radius: 0px; height: 5em; "><i class="fa fa-filter"></i>  Filtrar por Tipo</button>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filter" aria-expanded="false" aria-controls="filter" style="width: 100%; background: rgb(42, 38, 95); border-radius: 0px; height: 5em; "><i class="fa fa-filter"></i>  Filtrar Receita Por Categoria</button>
         <div class="collapse " id="filter">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
 
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-991" value="Portuguesa" class="custom" />
+                        <input type="checkbox" name="filter" id="checkbox-991" value="Portuguesa" class="customFilter" />
                         <label for="checkbox-991">Portuguesa</label>
                     </div>
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-992" value="Vegetariano" class="custom" />
+                        <input type="checkbox" name="filter" id="checkbox-992" value="Vegetariano" class="customFilter" />
                         <label for="checkbox-992">Vegetariano</label>
                     </div>
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-993" value="Doces" class="custom" />
+                        <input type="checkbox" name="filter" id="checkbox-993" value="Doces" class="customFilter" />
                         <label for="checkbox-993">Doces</label>
                     </div>
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-994" value="Tradicional" class="custom" />
+                        <input type="checkbox" name="filter" id="checkbox-994" value="Tradicional" class="customFilter" />
                         <label for="checkbox-994">Tradicional</label>
                     </div>
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-994" value="Mediterraneo" class="custom" />
-                        <label for="checkbox-994">Mediterrâneo</label>
+                        <input type="checkbox" name="filter" id="checkbox-995" value="Mediterraneo" class="customFilter" />
+                        <label for="checkbox-995">Mediterrâneo</label>
                     </div>
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-994" value="Saladas" class="custom" />
-                        <label for="checkbox-994">Saladas</label>
+                        <input type="checkbox" name="filter" id="checkbox-996" value="Saladas" class="customFilter" />
+                        <label for="checkbox-996">Saladas</label>
                     </div>
                     <div style="padding: 3%; ">
-                        <input type="checkbox" name="filter" id="checkbox-994" value="Italiana" class="custom" />
-                        <label for="checkbox-994">Italiana</label>
+                        <input type="checkbox" name="filter" id="checkbox-997" value="Italiana" class="customFilter" />
+                        <label for="checkbox-997">Italiana</label>
                     </div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;">
-                    <button id="filter_close" class="btn btn-primary" onclick="close_card_filter()" type="button" data-toggle="collapse" data-target="#filter" aria-expanded="false" aria-controls="filter">Done</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding: 4%;"><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13" style="width: 100%; background-color:rgb(255, 236, 174);border-radius: 0px; height: 5em;"><p style="position:center; color:black;">Ingredientes Mais Frequentes <img class ="buttons_img" src="./img/stars.png"></p></button>
+        <div class="collapse " id="collapse13">
+            <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
+                <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="checkbox-400" value="bife de vaca"/><label for="checkbox-400">bife de vaca</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="checkbox-401" value="queijos"/><label for="checkbox-401">queijos</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-402" value="pão de forma" /><label for="checkbox-402">pão de forma</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-403" value="salsicha" /><label for="checkbox-403">salsicha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-404" value="linguiça" /><label for="checkbox-404">linguiça</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="checkbox-405" value="fiambre" /><label for="checkbox-405">fiambre</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-406" value="sal" /><label for="checkbox-406">sal</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-407" value="pimenta" /><label for="checkbox-407">pimenta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-408" value="azeite" /><labeli for="checkbox-408">azeite</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="checkbox-409" value="alho" /><label for="checkbox-409">alho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="checkbox-410" value="cebola" /><label for="checkbox-410">cebola</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-411" value="fermento" /><label for="checkbox-411">fermento</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-412" value="pão ralado" /><label for="checkbox-412">pão ralado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-413" value="farinha" /><label for="checkbox-413">farinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-414" value="soja granulada" /><label for="checkbox-414">soja granulada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-415" value="salsa" /><label for="checkbox-415">salsa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-416" value="oregãos" /><label for="checkbox-416">oregãos</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-417" value="tomate" /><label for="checkbox-417">tomate</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-418" value="açúcar" /><label for="checkbox-418">açúcar</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-419" value="manjericão" /><label for="checkbox-419">manjericão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-420" value="massa" /><label for="checkbox-420">massa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-421" value="ovo" /><label for="checkbox-421">ovo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-422" value="óleo" /><label for="checkbox-422">óleo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-423" value="leite meio-gordo" /><label for="checkbox-423">leite meio-gordo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-424" value="chocolate em pó" /><label for="checkbox-424">chocolate em pó</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="checkbox-425" value="fermento em pó" /><label for="checkbox-425">fermento em pó</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="checkbox-426" value="batata" /><label for="checkbox-426">batata</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="checkbox-427" value="bacalhau" /><label for="checkbox-427">bacalhau</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="checkbox-428" value="manteiga" /><label for="checkbox-428">manteiga</label></div>
                 </div>
             </div>
         </div>
@@ -98,33 +130,35 @@
         <div class="collapse " id="collapse0">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-0" value="manteiga" class="custom" /><label for="checkbox-0">manteiga</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-1" value="ovo" class="custom" /><label for="checkbox-1">ovo</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-2" value="leite de vaca" class="custom" /><label for="checkbox-2">leite de vaca</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-3" value="iogurte" class="custom" /><label for="checkbox-3">iogurte</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-4" value="leite condensado" class="custom" /><label for="checkbox-4">leite condensado</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-5" value="gelado" class="custom" /><label for="checkbox-5">gelado</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-6" value="natas de culinária" class="custom" /><label for="checkbox-6">natas de culinária</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-7" value="natas para bater" class="custom" /><label for="checkbox-7">natas para bater</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-8" value="mozzarela" class="custom" /><label for="checkbox-8">mozzarela</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-9" value="gouda" class="custom" /><label for="checkbox-9">gouda</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-10" value="queijo fresco" class="custom" /><label for="checkbox-10">queijo fresco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-11" value="brie" class="custom" /><label for="checkbox-11">brie</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-12" value="parmesão" class="custom" /><label for="checkbox-12">parmesão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-13" value="mascarpone" class="custom" /><label for="checkbox-13">mascarpone</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-14" value="feta" class="custom" /><label for="checkbox-14">feta</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-15" value="emmental" class="custom" /><label for="checkbox-15">emmental</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-16" value="cheddar" class="custom" /><label for="checkbox-16">cheddar</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-17" value="camembert" class="custom" /><label for="checkbox-17">camembert</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-18" value="queijo com ervas" class="custom" /><label for="checkbox-18">queijo com ervas</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-19" value="quejo de raclette" class="custom" /><label for="checkbox-19">quejo de raclette</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-20" value="edam" class="custom" /><label for="checkbox-20">edam</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-21" value="roquefort" class="custom" /><label for="checkbox-21">roquefort</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-22" value="quejo de cabra" class="custom" /><label for="checkbox-22">quejo de cabra</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-23" value="queijo da serra" class="custom" /><label for="checkbox-23">queijo da serra</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LACTICÍNIOS" id="checkbox-24" value="velveeta" class="custom" /><label for="checkbox-24">velveeta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="manteiga" value="manteiga" /><label for="manteiga">manteiga</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="ovo" value="ovo" /><label for="ovo">ovo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="leite_meio-gordo" value="leite meio-gordo" /><label for="leite_meio-gordo">leite meio-gordo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="iogurte" value="iogurte" /><label for="iogurte">iogurte</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="leite_condensado" value="leite condensado" /><label for="leite_condensado">leite condensado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="gelado" value="gelado" /><label for="gelado">gelado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="natas" value="natas" /><label for="natas">natas</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="natas_para_bater" value="natas para bater" /><label for="natas_para_bater">natas para bater</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="clara_de_ovo" value="clara de ovo" /><label for="clara_de_ovo">clara de ovo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="mozzarela" value="mozzarela" /><label for="mozzarela">mozzarela</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="chantilly" value="chantilly" /><label for="chantilly">chantilly</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="gouda" value="gouda" /><label for="gouda">gouda</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="queijo" value="queijo" /><label for="queijo">queijo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="leite" value="leite" /><label for="leite">leite</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="brie" value="brie" /><label for="brie">brie</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="parmesao" value="parmesão" /><label for="parmesao">parmesão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="mascarpone" value="mascarpone" /><label for="mascarpone">mascarpone</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="feta" value="feta" /><label for="feta">feta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="emmental" value="emmental" /><label for="emmental">emmental</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="cheddar" value="cheddar" /><label for="cheddar">cheddar</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="camembert" value="camembert" /><label for="camembert">camembert</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="queijo_com_ervas" value="queijo com ervas" /><label for="queijo_com_ervas">queijo com ervas</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="quejo_de_raclette" value="quejo de raclette" /><label for="quejo_de_raclette">quejo de raclette</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="edam" value="edam" /><label for="edam">edam</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="roquefort" value="roquefort" /><label for="roquefort">roquefort</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="quejo_de_cabra" value="quejo de cabra" /><label for="quejo_de_cabra">quejo de cabra</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="queijo_da_serra" value="queijo da serra" /><label for="queijo_da_serra">queijo da serra</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LACTICÍNIOS" id="velveeta" value="velveeta" /><label for="velveeta">velveeta</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria0close" class="btn btn-primary" value="LACTICÍNIOS" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse0" aria-expanded="false" aria-controls="collapse0">Done</button></div>
             </div>
         </div>
     </div>
@@ -132,32 +166,33 @@
         <div class="collapse " id="collapse1">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-25" value="tomate" class="custom" /><label for="checkbox-25">tomate</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-26" value="limão" class="custom" /><label for="checkbox-26">limão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-27" value="maçã" class="custom" /><label for="checkbox-27">maçã</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-28" value="banana" class="custom" /><label for="checkbox-28">banana</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-29" value="lima" class="custom" /><label for="checkbox-29">lima</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-30" value="morango" class="custom" /><label for="checkbox-30">morango</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-31" value="laranja" class="custom" /><label for="checkbox-31">laranja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-32" value="ananás" class="custom" /><label for="checkbox-32">ananás</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-33" value="mirtilo" class="custom" /><label for="checkbox-33">mirtilo</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-34" value="passa" class="custom" /><label for="checkbox-34">passa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-35" value="coco" class="custom" /><label for="checkbox-35">coco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-36" value="uva" class="custom" /><label for="checkbox-36">uva</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-37" value="pêra" class="custom" /><label for="checkbox-37">pêra</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-38" value="manga" class="custom" /><label for="checkbox-38">manga</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-39" value="pêssego" class="custom" /><label for="checkbox-39">pêssego</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-40" value="amora" class="custom" /><label for="checkbox-40">amora</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-41" value="amora preta" class="custom" /><label for="checkbox-41">amora preta</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-42" value="cereja" class="custom" /><label for="checkbox-42">cereja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-43" value="melância" class="custom" /><label for="checkbox-43">melância</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-44" value="kiwi" class="custom" /><label for="checkbox-44">kiwi</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-45" value="nectarina" class="custom" /><label for="checkbox-45">nectarina</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-46" value="clementina" class="custom" /><label for="checkbox-46">clementina</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-47" value="papaia" class="custom" /><label for="checkbox-47">papaia</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTAS" id="checkbox-48" value="ameixa" class="custom" /><label for="checkbox-48">ameixa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="melancia" value="melancia" /><label for="melancia">melancia</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="tomate" value="tomate" /><label for="tomate">tomate</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="limao" value="limão" /><label for="limao">limão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="maca" value="maçã" /><label for="maca">maçã</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="banana" value="banana" /><label for="banana">banana</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="lima" value="lima" /><label for="lima">lima</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="morango" value="morango" /><label for="morango">morango</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="coco_ralado" value="coco ralado" /><label for="coco_ralado">coco ralado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="laranja" value="laranja" /><label for="laranja">laranja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="ananas" value="ananás" /><label for="ananas">ananás</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="mirtilo" value="mirtilo" /><label for="mirtilo">mirtilo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="passa" value="passa" /><label for="passa">passa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="coco" value="coco" /><label for="coco">coco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="uva" value="uva" /><label for="uva">uva</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="pera" value="pêra" /><label for="pera">pêra</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="manga" value="manga" /><label for="manga">manga</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="pessego" value="pêssego" /><label for="pessego">pêssego</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="amora" value="amora" /><label for="amora">amora</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="amora_preta" value="amora preta" /><label for="amora_preta">amora preta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="cereja" value="cereja" /><label for="cereja">cereja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="melancia" value="melância" /><label for="melancia">melância</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="kiwi" value="kiwi" /><label for="kiwi">kiwi</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="nectarina" value="nectarina" /><label for="nectarina">nectarina</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="clementina" value="clementina" /><label for="clementina">clementina</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="papaia" value="papaia" /><label for="papaia">papaia</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTAS" id="ameixa" value="ameixa" /><label for="ameixa">ameixa</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria1close" class="btn btn-primary" value="FRUTAS" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Done</button></div>
             </div>
         </div>
     </div>
@@ -165,33 +200,36 @@
         <div class="collapse " id="collapse2">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-49" value="arroz" class="custom" /><label for="checkbox-49">arroz</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-50" value="massa" class="custom" /><label for="checkbox-50">massa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-51" value="farinha" class="custom" /><label for="checkbox-51">farinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-52" value="pão" class="custom" /><label for="checkbox-52">pão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-53" value="fermento" class="custom" /><label for="checkbox-53">fermento</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-54" value="bicarbonato de sódio" class="custom" /><label for="checkbox-54">bicarbonato de sódio</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-55" value="pão ralado" class="custom" /><label for="checkbox-55">pão ralado</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-56" value="amido de milho" class="custom" /><label for="checkbox-56">amido de milho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-57" value="aveia" class="custom" /><label for="checkbox-57">aveia</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-58" value="noodle" class="custom" /><label for="checkbox-58">noodle</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-59" value="tortilha" class="custom" /><label for="checkbox-59">tortilha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-60" value="fermento de pão" class="custom" /><label for="checkbox-60">fermento de pão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-61" value="bolacha de água e sal" class="custom" /><label for="checkbox-61">bolacha de água e sal</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-62" value="quinoa" class="custom" /><label for="checkbox-62">quinoa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-63" value="arroz integral" class="custom" /><label for="checkbox-63">arroz integral</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-64" value="farinha com fermento" class="custom" /><label for="checkbox-64">farinha com fermento</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-65" value="pipocas" class="custom" /><label for="checkbox-65">pipocas</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-66" value="massa de tarte" class="custom" /><label for="checkbox-66">massa de tarte</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-67" value="massa folhada" class="custom" /><label for="checkbox-67">massa folhada</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-68" value="massa de pizza" class="custom" /><label for="checkbox-68">massa de pizza</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-69" value="croutons" class="custom" /><label for="checkbox-69">croutons</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-70" value="pão pita" class="custom" /><label for="checkbox-70">pão pita</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-71" value="basmati" class="custom" /><label for="checkbox-71">basmati</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-72" value="arroz agulha" class="custom" /><label for="checkbox-72">arroz agulha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="HIDRATOS_DE_CARBONO" id="checkbox-73" value="massa para lasanha" class="custom" /><label for="checkbox-73">massa para lasanha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="granola" value="granola" /><label for="granola">granola</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="cuscuz" value="cuscuz" /><label for="cuscuz">cuscuz</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="arroz" value="arroz" /><label for="arroz">arroz</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="massa" value="massa" /><label for="massa">massa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="farinha" value="farinha" /><label for="farinha">farinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="pao" value="pão" /><label for="pao">pão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="pao_de_forma" value="pão de forma" /><label for="pao_de_forma">pão de forma</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="fermento" value="fermento" /><label for="fermento">fermento</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="bicarbonato_de_sodio" value="bicarbonato de sódio" /><label for="bicarbonato_de_sodio">bicarbonato de sódio</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="pao_ralado" value="pão ralado" /><label for="pao_ralado">pão ralado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="amido_de_milho" value="amido de milho" /><label for="amido_de_milho">amido de milho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="aveia" value="aveia" /><label for="aveia">aveia</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="noodle" value="noodle" /><label for="noodle">noodle</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="tortilha" value="tortilha" /><label for="tortilha">tortilha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="fermento_de_pao" value="fermento de pão" /><label for="fermento_de_pao">fermento de pão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="bolacha_de_agua_e_sal" value="bolacha de água e sal" /><label for="bolacha_de_agua_e_sal">bolacha de água e sal</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="quinoa" value="quinoa" /><label for="quinoa">quinoa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="arroz_integral" value="arroz integral" /><label for="arroz_integral">arroz integral</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="farinha_com_fermento" value="farinha com fermento" /><label for="farinha_com_fermento">farinha com fermento</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="farinha_de_amendoa" value="farinha de amêndoa" /><label for="farinha_de_amendoa">farinha de amêndoa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="pipocas" value="pipocas" /><label for="pipocas">pipocas</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="massa_de_tarte" value="massa de tarte" /><label for="massa_de_tarte">massa de tarte</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="massa_folhada" value="massa folhada" /><label for="massa_folhada">massa folhada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="massa_de_pizza" value="massa de pizza" /><label for="massa_de_pizza">massa de pizza</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="croutons" value="croutons" /><label for="croutons">croutons</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="pao_pita" value="pão pita" /><label for="pao_pita">pão pita</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="basmati" value="basmati" /><label for="basmati">basmati</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="arroz_agulha" value="arroz agulha" /><label for="arroz_agulha">arroz agulha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="HIDRATOS_DE_CARBONO" id="massa_para_lasanha" value="massa para lasanha" /><label for="massa_para_lasanha">massa para lasanha</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria2close" class="btn btn-primary" value="HIDRATOS_DE_CARBONO" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Done</button></div>
             </div>
         </div>
     </div>
@@ -199,24 +237,32 @@
         <div class="collapse " id="collapse3">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-74" value="canela" class="custom" /><label for="checkbox-74">canela</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-75" value="baunilha" class="custom" /><label for="checkbox-75">baunilha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-76" value="alho em pó" class="custom" /><label for="checkbox-76">alho em pó</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-77" value="paprica" class="custom" /><label for="checkbox-77">paprica</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-78" value="orégãos" class="custom" /><label for="checkbox-78">orégãos</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-79" value="cuminho" class="custom" /><label for="checkbox-79">cuminho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-80" value="pimenta-caiena" class="custom" /><label for="checkbox-80">pimenta-caiena</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-81" value="tomilho" class="custom" /><label for="checkbox-81">tomilho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-82" value="noz-moscada" class="custom" /><label for="checkbox-82">noz-moscada</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-83" value="caril" class="custom" /><label for="checkbox-83">caril</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-84" value="açafrão" class="custom" /><label for="checkbox-84">açafrão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-85" value="salva" class="custom" /><label for="checkbox-85">salva</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-86" value="cacau" class="custom" /><label for="checkbox-86">cacau</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-87" value="estrela de anís" class="custom" /><label for="checkbox-87">estrela de anís</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-88" value="vinho para arroz" class="custom" /><label for="checkbox-88">vinho para arroz</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="checkbox-89" value="wasabi" class="custom" /><label for="checkbox-89">wasabi</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="louro" value="louro" /><label for="louro">louro</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="coentros" value="coentros" /><label for="coentros">coentros</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="cebelha" value="cebelha" /><label for="cebelha">cebelha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="acucar" value="açúcar" /><label for="acucar">açúcar</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="acucar_em_po" value="açúcar em pó" /><label for="acucar_em_po">açúcar em pó</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="canela" value="canela" /><label for="canela">canela</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="corante" value="corante" /><label for="corante">corante</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="baunilha" value="baunilha" /><label for="baunilha">baunilha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="colorau" value="colorau" /><label for="colorau">colorau</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="alho_em_po" value="alho em pó" /><label for="alho_em_po">alho em pó</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="paprica" value="paprica" /><label for="paprica">paprica</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="oregaos" value="orégãos" /><label for="oregaos">orégãos</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="cuminho" value="cuminho" /><label for="cuminho">cuminho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="pimenta" value="pimenta" /><label for="pimenta">pimenta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="pimenta-caiena" value="pimenta-caiena" /><label for="pimenta-caiena">pimenta-caiena</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="pimenta_preta" value="pimenta preta" /><label for="pimenta_preta">pimenta preta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="tomilho" value="tomilho" /><label for="tomilho">tomilho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="noz-moscada" value="noz-moscada" /><label for="noz-moscada">noz-moscada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="caril" value="caril" /><label for="caril">caril</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="acafrao" value="açafrão" /><label for="acafrao">açafrão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="salva" value="salva" /><label for="salva">salva</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="cacau" value="cacau" /><label for="cacau">cacau</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="estrela_de_anis" value="estrela de anís" /><label for="estrela_de_anis">estrela de anís</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="vinho_para_arroz" value="vinho para arroz" /><label for="vinho_para_arroz">vinho para arroz</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ESPECIARIAS_&_TEMPEROS" id="wasabi" value="wasabi" /><label for="wasabi">wasabi</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria3close" class="btn btn-primary" value="ESPECIARIAS_&_TEMPEROS" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Done</button></div>
             </div>
         </div>
     </div>
@@ -224,31 +270,36 @@
         <div class="collapse " id="collapse4">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-90" value="peito de galinha" class="custom" /><label for="checkbox-90">peito de galinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-91" value="carne moída" class="custom" /><label for="checkbox-91">carne moída</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-92" value="bacon" class="custom" /><label for="checkbox-92">bacon</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-93" value="salsicha fresca" class="custom" /><label for="checkbox-93">salsicha fresca</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-94" value="bife" class="custom" /><label for="checkbox-94">bife</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-95" value="fiambre" class="custom" /><label for="checkbox-95">fiambre</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-96" value="salsicha hotdog" class="custom" /><label for="checkbox-96">salsicha hotdog</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-97" value="costoleta de porco" class="custom" /><label for="checkbox-97">costoleta de porco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-98" value="coxa de galinha" class="custom" /><label for="checkbox-98">coxa de galinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-99" value="peru" class="custom" /><label for="checkbox-99">peru</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-100" value="chouriço" class="custom" /><label for="checkbox-100">chouriço</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-101" value="porco" class="custom" /><label for="checkbox-101">porco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-102" value="pepperoni" class="custom" /><label for="checkbox-102">pepperoni</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-103" value="galinha" class="custom" /><label for="checkbox-103">galinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-104" value="perna de galinha" class="custom" /><label for="checkbox-104">perna de galinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-105" value="asas de galinha" class="custom" /><label for="checkbox-105">asas de galinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-106" value="salame" class="custom" /><label for="checkbox-106">salame</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-107" value="persunto" class="custom" /><label for="checkbox-107">persunto</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-108" value="cabrito" class="custom" /><label for="checkbox-108">cabrito</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-109" value="pato" class="custom" /><label for="checkbox-109">pato</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-110" value="fígado" class="custom" /><label for="checkbox-110">fígado</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-111" value="coelho" class="custom" /><label for="checkbox-111">coelho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CARNE" id="checkbox-112" value="foie gras" class="custom" /><label for="checkbox-112">foie gras</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="coxas_de_frango" value="coxas de frango" /><label for="coxas_de_frango">coxas de frango</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="peito_de_galinha" value="peito de galinha" /><label for="peito_de_galinha">peito de galinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="carne_moida" value="carne moída" /><label for="carne_moida">carne moída</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="bacon" value="bacon" /><label for="bacon">bacon</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="peito_de_pato" value="peito de pato" /><label for="peito_de_pato">peito de pato</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="vitela" value="vitela" /><label for="vitela">vitela</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="salsicha" value="salsicha" /><label for="salsicha">salsicha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="linguica" value="linguiça" /><label for="linguica">linguiça</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="bife" value="bife" /><label for="bife">bife</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="bife_de_vaca" value="bife de vaca" /><label for="bife_de_vaca">bife de vaca</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="fiambre" value="fiambre" /><label for="fiambre">fiambre</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="salsicha_hotdog" value="salsicha hotdog" /><label for="salsicha_hotdog">salsicha hotdog</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="costoleta_de_porco" value="costoleta de porco" /><label for="costoleta_de_porco">costoleta de porco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="coxa_de_galinha" value="coxa de galinha" /><label for="coxa_de_galinha">coxa de galinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="peru" value="peru" /><label for="peru">peru</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="chourico" value="chouriço" /><label for="chourico">chouriço</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="toucinho" value="toucinho" /><label for="toucinho">toucinho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="porco" value="porco" /><label for="porco">porco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="pepperoni" value="pepperoni" /><label for="pepperoni">pepperoni</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="galinha" value="galinha" /><label for="galinha">galinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="perna_de_galinha" value="perna de galinha" /><label for="perna_de_galinha">perna de galinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="asas_de_galinha" value="asas de galinha" /><label for="asas_de_galinha">asas de galinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="salame" value="salame" /><label for="salame">salame</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="persunto" value="persunto" /><label for="persunto">persunto</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="cabrito" value="cabrito" /><label for="cabrito">cabrito</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="pato" value="pato" /><label for="pato">pato</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="figado" value="fígado" /><label for="figado">fígado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="coelho" value="coelho" /><label for="coelho">coelho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CARNE" id="foie_gras" value="foie gras" /><label for="foie_gras">foie gras</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria4close" class="btn btn-primary" value="CARNE" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Done</button></div>
             </div>
         </div>
     </div>
@@ -256,25 +307,25 @@
         <div class="collapse " id="collapse5">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-113" value="atum em lata" class="custom" /><label for="checkbox-113">atum em lata</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-114" value="bife de atum" class="custom" /><label for="checkbox-114">bife de atum</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-115" value="salmão" class="custom" /><label for="checkbox-115">salmão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-116" value="filetes de pescada" class="custom" /><label for="checkbox-116">filetes de pescada</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-117" value="peixe-gato" class="custom" /><label for="checkbox-117">peixe-gato</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-118" value="anchovas" class="custom" /><label for="checkbox-118">anchovas</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-119" value="salmão fumado" class="custom" /><label for="checkbox-119">salmão fumado</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-120" value="enguia" class="custom" /><label for="checkbox-120">enguia</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-121" value="caviar" class="custom" /><label for="checkbox-121">caviar</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-122" value="bacalhau" class="custom" /><label for="checkbox-122">bacalhau</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-123" value="sardinha" class="custom" /><label for="checkbox-123">sardinha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-124" value="dourada" class="custom" /><label for="checkbox-124">dourada</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-125" value="perca" class="custom" /><label for="checkbox-125">perca</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-126" value="tamboril" class="custom" /><label for="checkbox-126">tamboril</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-127" value="peixe-espada" class="custom" /><label for="checkbox-127">peixe-espada</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-128" value="carapau" class="custom" /><label for="checkbox-128">carapau</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="PEIXE" id="checkbox-129" value="corvina" class="custom" /><label for="checkbox-129">corvina</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="atum_em_lata" value="atum em lata" /><label for="atum_em_lata">atum em lata</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="bife_de_atum" value="bife de atum" /><label for="bife_de_atum">bife de atum</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="salmao" value="salmão" /><label for="salmao">salmão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="filetes_de_pescada" value="filetes de pescada" /><label for="filetes_de_pescada">filetes de pescada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="peixe-gato" value="peixe-gato" /><label for="peixe-gato">peixe-gato</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="anchovas" value="anchovas" /><label for="anchovas">anchovas</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="salmao_fumado" value="salmão fumado" /><label for="salmao_fumado">salmão fumado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="salmao" value="salmão" /><label for="salmao">salmão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="enguia" value="enguia" /><label for="enguia">enguia</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="caviar" value="caviar" /><label for="caviar">caviar</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="bacalhau" value="bacalhau" /><label for="bacalhau">bacalhau</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="sardinha" value="sardinha" /><label for="sardinha">sardinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="dourada" value="dourada" /><label for="dourada">dourada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="perca" value="perca" /><label for="perca">perca</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="tamboril" value="tamboril" /><label for="tamboril">tamboril</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="peixe-espada" value="peixe-espada" /><label for="peixe-espada">peixe-espada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="carapau" value="carapau" /><label for="carapau">carapau</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="PEIXE" id="corvina" value="corvina" /><label for="corvina">corvina</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria5close" class="btn btn-primary" value="PEIXE" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Done</button></div>
             </div>
         </div>
     </div>
@@ -282,21 +333,21 @@
         <div class="collapse " id="collapse6">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-130" value="camarão" class="custom" /><label for="checkbox-130">camarão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-131" value="caranguejo" class="custom" /><label for="checkbox-131">caranguejo</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-132" value="escalope" class="custom" /><label for="checkbox-132">escalope</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-133" value="ostra" class="custom" /><label for="checkbox-133">ostra</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-134" value="amêijoa" class="custom" /><label for="checkbox-134">amêijoa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-135" value="lula" class="custom" /><label for="checkbox-135">lula</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-136" value="choco" class="custom" /><label for="checkbox-136">choco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-137" value="polvo" class="custom" /><label for="checkbox-137">polvo</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-138" value="lagosta" class="custom" /><label for="checkbox-138">lagosta</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-139" value="mexilhão" class="custom" /><label for="checkbox-139">mexilhão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-140" value="percebes" class="custom" /><label for="checkbox-140">percebes</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-141" value="vieira" class="custom" /><label for="checkbox-141">vieira</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="MARISCO" id="checkbox-142" value="sapateira" class="custom" /><label for="checkbox-142">sapateira</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="marisco_variado" value="marisco variado" /><label for="marisco_variado">marisco variado</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="camarao" value="camarão" /><label for="camarao">camarão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="caranguejo" value="caranguejo" /><label for="caranguejo">caranguejo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="escalope" value="escalope" /><label for="escalope">escalope</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="ostra" value="ostra" /><label for="ostra">ostra</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="ameijoa" value="amêijoa" /><label for="ameijoa">amêijoa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="lula" value="lula" /><label for="lula">lula</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="choco" value="choco" /><label for="choco">choco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="polvo" value="polvo" /><label for="polvo">polvo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="lagosta" value="lagosta" /><label for="lagosta">lagosta</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="mexilhao" value="mexilhão" /><label for="mexilhao">mexilhão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="percebes" value="percebes" /><label for="percebes">percebes</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="vieira" value="vieira" /><label for="vieira">vieira</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="MARISCO" id="sapateira" value="sapateira" /><label for="sapateira">sapateira</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria6close" class="btn btn-primary" value="MARISCO" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">Done</button></div>
             </div>
         </div>
     </div>
@@ -304,26 +355,34 @@
         <div class="collapse " id="collapse7">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-143" value="molho barbecue" class="custom" /><label for="checkbox-143">molho barbecue</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-144" value="ketchup" class="custom" /><label for="checkbox-144">ketchup</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-145" value="maionese" class="custom" /><label for="checkbox-145">maionese</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-146" value="mostarda" class="custom" /><label for="checkbox-146">mostarda</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-147" value="mostarda dijon" class="custom" /><label for="checkbox-147">mostarda dijon</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-148" value="molho cocktail" class="custom" /><label for="checkbox-148">molho cocktail</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-149" value="molho picante" class="custom" /><label for="checkbox-149">molho picante</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-150" value="molho de soja" class="custom" /><label for="checkbox-150">molho de soja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-151" value="vinagre" class="custom" /><label for="checkbox-151">vinagre</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-152" value="vinagre balsâmico" class="custom" /><label for="checkbox-152">vinagre balsâmico</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-153" value="vinagre de maçã" class="custom" /><label for="checkbox-153">vinagre de maçã</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-154" value="molho agridoce" class="custom" /><label for="checkbox-154">molho agridoce</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-155" value="teriaki" class="custom" /><label for="checkbox-155">teriaki</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-156" value="tabasco" class="custom" /><label for="checkbox-156">tabasco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-157" value="molho para kebab" class="custom" /><label for="checkbox-157">molho para kebab</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-158" value="molho de caril e manga" class="custom" /><label for="checkbox-158">molho de caril e manga</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-159" value="maionese com alho" class="custom" /><label for="checkbox-159">maionese com alho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="checkbox-160" value="molho de francesinha" class="custom" /><label for="checkbox-160">molho de francesinha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="agua" value="água" /><label for="agua">água</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="fermento_em_po" value="fermento em pó" /><label for="fermento_em_po">fermento em pó</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="chocolate_em_po" value="chocolate em pó" /><label for="chocolate_em_po">chocolate em pó</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="chocolate_preto" value="chocolate preto" /><label for="chocolate_preto">chocolate preto</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="oleo" value="óleo" /><label for="oleo">óleo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="azeite" value="azeite" /><label for="azeite">azeite</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_de_tomate" value="molho de tomate" /><label for="molho_de_tomate">molho de tomate</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="sal" value="sal" /><label for="sal">sal</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_barbecue" value="molho barbecue" /><label for="molho_barbecue">molho barbecue</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="ketchup" value="ketchup" /><label for="ketchup">ketchup</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="maionese" value="maionese" /><label for="maionese">maionese</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="mostarda" value="mostarda" /><label for="mostarda">mostarda</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="mostarda_dijon" value="mostarda dijon" /><label for="mostarda_dijon">mostarda dijon</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="polpa_de_tomate" value="polpa de tomate" /><label for="polpa_de_tomate">polpa de tomate</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_cocktail" value="molho cocktail" /><label for="molho_cocktail">molho cocktail</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_picante" value="molho picante" /><label for="molho_picante">molho picante</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_de_soja" value="molho de soja" /><label for="molho_de_soja">molho de soja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="vinagre" value="vinagre" /><label for="vinagre">vinagre</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="vinagre_balsamico" value="vinagre balsâmico" /><label for="vinagre_balsamico">vinagre balsâmico</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="vinagre_de_maca" value="vinagre de maçã" /><label for="vinagre_de_maca">vinagre de maçã</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_agridoce" value="molho agridoce" /><label for="molho_agridoce">molho agridoce</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="teriaki" value="teriaki" /><label for="teriaki">teriaki</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="tabasco" value="tabasco" /><label for="tabasco">tabasco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_para_kebab" value="molho para kebab" /><label for="molho_para_kebab">molho para kebab</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_de_caril_e_manga" value="molho de caril e manga" /><label for="molho_de_caril_e_manga">molho de caril e manga</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="maionese_com_alho" value="maionese com alho" /><label for="maionese_com_alho">maionese com alho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="CONDIMENTOS_&_ÓLEOS" id="molho_de_francesinha" value="molho de francesinha" /><label for="molho_de_francesinha">molho de francesinha</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria7close" class="btn btn-primary" value="CONDIMENTOS_&_ÓLEOS" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">Done</button></div>
             </div>
         </div>
     </div>
@@ -331,19 +390,20 @@
         <div class="collapse " id="collapse8">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-161" value="feijão preto" class="custom" /><label for="checkbox-161">feijão preto</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-162" value="feijão manteiga" class="custom" /><label for="checkbox-162">feijão manteiga</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-163" value="lentilhas" class="custom" /><label for="checkbox-163">lentilhas</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-164" value="grão de bico" class="custom" /><label for="checkbox-164">grão de bico</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-165" value="fava" class="custom" /><label for="checkbox-165">fava</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-166" value="feijão vermelho" class="custom" /><label for="checkbox-166">feijão vermelho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-167" value="ervilhas" class="custom" /><label for="checkbox-167">ervilhas</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-168" value="soja" class="custom" /><label for="checkbox-168">soja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-169" value="feijão verde" class="custom" /><label for="checkbox-169">feijão verde</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-170" value="feijão branco" class="custom" /><label for="checkbox-170">feijão branco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="LEGUMES" id="checkbox-171" value="feijão frade" class="custom" /><label for="checkbox-171">feijão frade</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="funcho_em_rama" value="funcho em rama" /><label for="funcho_em_rama">funcho em rama</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="feijao_preto" value="feijão preto" /><label for="feijao_preto">feijão preto</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="feijao_manteiga" value="feijão manteiga" /><label for="feijao_manteiga">feijão manteiga</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="lentilhas" value="lentilhas" /><label for="lentilhas">lentilhas</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="grao_de_bico" value="grão de bico" /><label for="grao_de_bico">grão de bico</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="grao" value="grão" /><label for="grao">grão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="fava" value="fava" /><label for="fava">fava</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="feijao_vermelho" value="feijão vermelho" /><label for="feijao_vermelho">feijão vermelho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="ervilhas" value="ervilhas" /><label for="ervilhas">ervilhas</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="soja" value="soja" /><label for="soja">soja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="feijao_verde" value="feijão verde" /><label for="feijao_verde">feijão verde</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="feijao_branco" value="feijão branco" /><label for="feijao_branco">feijão branco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="LEGUMES" id="feijao_frade" value="feijão frade" /><label for="feijao_frade">feijão frade</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria8close" class="btn btn-primary" value="LEGUMES" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">Done</button></div>
             </div>
         </div>
     </div>
@@ -351,24 +411,23 @@
         <div class="collapse " id="collapse9">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-172" value="vinho branco" class="custom" /><label for="checkbox-172">vinho branco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-173" value="cerveja" class="custom" /><label for="checkbox-173">cerveja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-174" value="vinho tinto" class="custom" /><label for="checkbox-174">vinho tinto</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-175" value="vinho do porto" class="custom" /><label for="checkbox-175">vinho do porto</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-176" value="rum" class="custom" /><label for="checkbox-176">rum</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-177" value="whiskey" class="custom" /><label for="checkbox-177">whiskey</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-178" value="tequila" class="custom" /><label for="checkbox-178">tequila</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-179" value="bourbon" class="custom" /><label for="checkbox-179">bourbon</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-180" value="licor" class="custom" /><label for="checkbox-180">licor</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-181" value="brandy" class="custom" /><label for="checkbox-181">brandy</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-182" value="gin" class="custom" /><label for="checkbox-182">gin</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-183" value="champanhe" class="custom" /><label for="checkbox-183">champanhe</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-184" value="cognac" class="custom" /><label for="checkbox-184">cognac</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-185" value="vodka" class="custom" /><label for="checkbox-185">vodka</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-186" value="vinho de culinária" class="custom" /><label for="checkbox-186">vinho de culinária</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="ALCÓOL" id="checkbox-187" value="sake" class="custom" /><label for="checkbox-187">sake</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="vinho_branco" value="vinho branco" /><label for="vinho_branco">vinho branco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="cerveja" value="cerveja" /><label for="cerveja">cerveja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="vinho_tinto" value="vinho tinto" /><label for="vinho_tinto">vinho tinto</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="vinho_do_porto" value="vinho do porto" /><label for="vinho_do_porto">vinho do porto</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="rum" value="rum" /><label for="rum">rum</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="whiskey" value="whiskey" /><label for="whiskey">whiskey</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="tequila" value="tequila" /><label for="tequila">tequila</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="bourbon" value="bourbon" /><label for="bourbon">bourbon</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="licor" value="licor" /><label for="licor">licor</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="brandy" value="brandy" /><label for="brandy">brandy</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="gin" value="gin" /><label for="gin">gin</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="champanhe" value="champanhe" /><label for="champanhe">champanhe</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="cognac" value="cognac" /><label for="cognac">cognac</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="vodka" value="vodka" /><label for="vodka">vodka</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="vinho_de_culinaria" value="vinho de culinária" /><label for="vinho_de_culinaria">vinho de culinária</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="ALCÓOL" id="sake" value="sake" /><label for="sake">sake</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria9close" class="btn btn-primary" value="ALCÓOL" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">Done</button></div>
             </div>
         </div>
     </div>
@@ -376,19 +435,18 @@
         <div class="collapse " id="collapse10">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-188" value="manteiga de amendoim" class="custom" /><label for="checkbox-188">manteiga de amendoim</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-189" value="amêndoa" class="custom" /><label for="checkbox-189">amêndoa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-190" value="noz" class="custom" /><label for="checkbox-190">noz</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-191" value="noz-pecã" class="custom" /><label for="checkbox-191">noz-pecã</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-192" value="amendoim" class="custom" /><label for="checkbox-192">amendoim</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-193" value="caju" class="custom" /><label for="checkbox-193">caju</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-194" value="pinhão" class="custom" /><label for="checkbox-194">pinhão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-195" value="avelã" class="custom" /><label for="checkbox-195">avelã</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-196" value="castanha" class="custom" /><label for="checkbox-196">castanha</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-197" value="macadâmia" class="custom" /><label for="checkbox-197">macadâmia</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="FRUTOS_SECOS" id="checkbox-198" value="praline" class="custom" /><label for="checkbox-198">praline</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="manteiga_de_amendoim" value="manteiga de amendoim" /><label for="manteiga_de_amendoim">manteiga de amendoim</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="amendoa" value="amêndoa" /><label for="amendoa">amêndoa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="noz" value="noz" /><label for="noz">noz</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="noz-peca" value="noz-pecã" /><label for="noz-peca">noz-pecã</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="amendoim" value="amendoim" /><label for="amendoim">amendoim</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="caju" value="caju" /><label for="caju">caju</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="pinhao" value="pinhão" /><label for="pinhao">pinhão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="avela" value="avelã" /><label for="avela">avelã</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="castanha" value="castanha" /><label for="castanha">castanha</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="macadamia" value="macadâmia" /><label for="macadamia">macadâmia</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="praline" value="praline" /><label for="praline">praline</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria10close" class="btn btn-primary" value="FRUTOS_SECOS" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">Done</button></div>
             </div>
         </div>
     </div>
@@ -396,17 +454,17 @@
         <div class="collapse " id="collapse11">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-199" value="bebida de soja" class="custom" /><label for="checkbox-199">bebida de soja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-200" value="bebida de arroz" class="custom" /><label for="checkbox-200">bebida de arroz</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-201" value="bebida de amêndoa" class="custom" /><label for="checkbox-201">bebida de amêndoa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-202" value="bebida de amêndoa torrada" class="custom" /><label for="checkbox-202">bebida de amêndoa torrada</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-203" value="bebida de aveia" class="custom" /><label for="checkbox-203">bebida de aveia</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-204" value="bebida de coco" class="custom" /><label for="checkbox-204">bebida de coco</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-205" value="soja" class="custom" /><label for="checkbox-205">soja</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-206" value="tofu" class="custom" /><label for="checkbox-206">tofu</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGAN_e_VEGETARIANO" id="checkbox-207" value="seitã" class="custom" /><label for="checkbox-207">seitã</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="soja_granulada" value="soja granulada" /><label for="soja_granulada">soja granulada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="bebida_de_soja" value="bebida de soja" /><label for="bebida_de_soja">bebida de soja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="bebida_de_arroz" value="bebida de arroz" /><label for="bebida_de_arroz">bebida de arroz</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="bebida_de_amendoa" value="bebida de amêndoa" /><label for="bebida_de_amendoa">bebida de amêndoa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="bebida_de_amendoa_torrada" value="bebida de amêndoa torrada" /><label for="bebida_de_amendoa_torrada">bebida de amêndoa torrada</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="bebida_de_aveia" value="bebida de aveia" /><label for="bebida_de_aveia">bebida de aveia</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="bebida_de_coco" value="bebida de coco" /><label for="bebida_de_coco">bebida de coco</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="soja" value="soja" /><label for="soja">soja</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="tofu" value="tofu" /><label for="tofu">tofu</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="FRUTOS_SECOS" id="seita" value="seitã" /><label for="seita">seitã</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria11close" class="btn btn-primary" value="VEGAN_e_VEGETARIANO" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">Done</button></div>
             </div>
         </div>
     </div>
@@ -414,50 +472,49 @@
         <div class="collapse " id="collapse12">
             <div class="card card-body " style="box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);">
                 <div class="row" style="display: flex; flex-wrap: wrap; flex-direction: initial;justify-content: space-evenly;">
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-208" value="cebola" class="custom" /><label for="checkbox-208">cebola</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-209" value="alho" class="custom" /><label for="checkbox-209">alho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-210" value="batata" class="custom" /><label for="checkbox-210">batata</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-211" value="cenoura" class="custom" /><label for="checkbox-211">cenoura</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-212" value="pimento" class="custom" /><label for="checkbox-212">pimento</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-213" value="manjericão" class="custom" /><label for="checkbox-213">manjericão</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-214" value="salsa" class="custom" /><label for="checkbox-214">salsa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-215" value="brócolos" class="custom" /><label for="checkbox-215">brócolos</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-216" value="milho" class="custom" /><label for="checkbox-216">milho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-217" value="espinafre" class="custom" /><label for="checkbox-217">espinafre</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-218" value="cogumelo" class="custom" /><label for="checkbox-218">cogumelo</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-219" value="gengibre" class="custom" /><label for="checkbox-219">gengibre</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-220" value="piri-piri" class="custom" /><label for="checkbox-220">piri-piri</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-221" value="pimento picante" class="custom" /><label for="checkbox-221">pimento picante</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-222" value="rosmaninho" class="custom" /><label for="checkbox-222">rosmaninho</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-223" value="alface" class="custom" /><label for="checkbox-223">alface</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-224" value="cebola roxa" class="custom" /><label for="checkbox-224">cebola roxa</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-225" value="pepino" class="custom" /><label for="checkbox-225">pepino</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-226" value="batata doce" class="custom" /><label for="checkbox-226">batata doce</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-227" value="picles" class="custom" /><label for="checkbox-227">picles</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-228" value="abacate" class="custom" /><label for="checkbox-228">abacate</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-229" value="azeitona" class="custom" /><label for="checkbox-229">azeitona</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-230" value="couve" class="custom" /><label for="checkbox-230">couve</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-231" value="couve-flor" class="custom" /><label for="checkbox-231">couve-flor</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-232" value="beringela" class="custom" /><label for="checkbox-232">beringela</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-233" value="abóbora" class="custom" /><label for="checkbox-233">abóbora</label></div>
-                    <div style="padding: 3%; "><input class="cat" type="checkbox" name="VEGETAIS" id="checkbox-234" value="xuxu" class="custom" /><label for="checkbox-234">xuxu</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="courgette" value="courgette" /><label for="courgette">courgette</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="pimentos" value="pimentos" /><label for="pimentos">pimentos</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="cebola" value="cebola" /><label for="cebola">cebola</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="alho" value="alho" /><label for="alho">alho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="batata" value="batata" /><label for="batata">batata</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="cenoura" value="cenoura" /><label for="cenoura">cenoura</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="pimento" value="pimento" /><label for="pimento">pimento</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="manjericao" value="manjericão" /><label for="manjericao">manjericão</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="salsa" value="salsa" /><label for="salsa">salsa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="brocolo" value="brócolo" /><label for="brocolo">brócolo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="milho" value="milho" /><label for="milho">milho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="espinafre" value="espinafre" /><label for="espinafre">espinafre</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="cogumelo" value="cogumelo" /><label for="cogumelo">cogumelo</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="gengibre" value="gengibre" /><label for="gengibre">gengibre</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="piri-piri" value="piri-piri" /><label for="piri-piri">piri-piri</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="pimento_picante" value="pimento picante" /><label for="pimento_picante">pimento picante</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="rosmaninho" value="rosmaninho" /><label for="rosmaninho">rosmaninho</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="alface" value="alface" /><label for="alface">alface</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="cebola_roxa" value="cebola roxa" /><label for="cebola_roxa">cebola roxa</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="pepino" value="pepino" /><label for="pepino">pepino</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="batata_doce" value="batata doce" /><label for="batata_doce">batata doce</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="picles" value="picles" /><label for="picles">picles</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="abacate" value="abacate" /><label for="abacate">abacate</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="azeitona" value="azeitona" /><label for="azeitona">azeitona</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="couve" value="couve" /><label for="couve">couve</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="couve-flor" value="couve-flor" /><label for="couve-flor">couve-flor</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="beringela" value="beringela" /><label for="beringela">beringela</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="abobora" value="abóbora" /><label for="abobora">abóbora</label></div>
+                    <div style="padding: 3%; "><input class="cat custom" type="checkbox" name="VEGETAIS" id="xuxu" value="xuxu" /><label for="xuxu">xuxu</label></div>
                 </div>
-                <div class="row d-flex flex-row-reverse" style="padding-right: 4%;"><button id="categoria12close" class="btn btn-primary" value="VEGETAIS" onclick="close_card(this.id)" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">Done</button></div>
             </div>
         </div>
     </div>
     <br>
     <br>
 
-
-    <script src="js/script.js "></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js "></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./apagar.js "></script>
+    <!--<script src="./js/search.js"></script>-->
 
 </body>
 
