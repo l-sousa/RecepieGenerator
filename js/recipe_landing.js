@@ -32,7 +32,7 @@ function load_receitas(receitas, ingredients) {
         }
 
         if (counter == 0) {
-            alert("Insira mais ingredientes!");
+            alert("Pesquisa inconclusiva. Insira mais ingredientes!");
             window.history.back();
         }
 
@@ -66,7 +66,7 @@ function append_recipe(recipe, percentage) { // onclick="redirect(this.id)"
 }
 
 function display_percentage(percentage) {
-    return "tem " + (percentage[0] * percentage[1]).toString().bold() + " dos " + percentage[1].toString().bold() + " ingredientes fundamentais";
+    return "tem " + (percentage[0] * percentage[1]).toString().bold() + " dos " + percentage[1].toString().bold() + " ingredientes necessarios";
 }
 
 function replace_accent(text) {
