@@ -31,9 +31,13 @@ function load_receitas(receitas, ingredients) {
 
         }
 
-        if (counter == 0) {
-            alert("Pesquisa inconclusiva. Insira mais ingredientes!");
+        if(ingredients.length == 0){
+            alert("Insira ingredientes!");
             window.history.back();
+        }
+        else if (counter == 0) {
+            alert("Nao temos nenhuma receita com os ingredientes que procura. Visite a pagina do top 10 e encomende o necessario para fazer qualquer uma das receitas!");
+            window.location.href = 'top_10_receitas.html';
         }
 
     });
